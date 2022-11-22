@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@color/yellow"
+    tools:context=".MainActivity">
+
+    <com.kyanogen.signatureview.SignatureView
+        android:id="@+id/signature_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/optionsHolder"
+        android:layout_marginBottom="5dp"
+        app:backgroundColor="#ffffff"
+        app:enableSignature="true"
+        app:penColor="#000000"
+        app:penSize="5dp" />
+
+    <LinearLayout
+        android:id="@+id/optionsHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="9dp"
+        android:gravity="center"
+        android:background="@color/cardview_dark_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1">
+
+            <SeekBar
+                android:id="@+id/pensize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+
+            </SeekBar>
+
+            <TextView
+                android:id="@+id/txtPenSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#bceecb">
+
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <ImageButton
+                android:id="@+id/btnEraser"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/ic_eraser">
+
+            </ImageButton>
+
+
+            <ImageButton
+                android:id="@+id/btnColorPicker"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/ic_color">
+
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/ic_delete40">
+            </ImageButton>
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/ic_save">
+
+            </ImageButton>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
