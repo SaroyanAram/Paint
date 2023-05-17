@@ -1,10 +1,12 @@
 package com.example.paint;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
@@ -43,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         askPermission();
 
         signatureView = findViewById(R.id.signature_view);
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         String date = format.format(new Date());
         fileName = path + "/" + date + ".png";
-
+ы
         if (!path.exists()) {
             path.mkdirs();
         }
@@ -69,9 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnColorPicker.setOnClickListener(view -> openColorPicker());
         btnDelete.setOnClickListener(view -> signatureView.clearCanvas());
-
         btnEraser.setOnClickListener(view -> touchEraser());
-
         btnSave.setOnClickListener(view -> saveImage());
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -80,15 +79,11 @@ public class MainActivity extends AppCompatActivity {
                 signatureView.setPenSize(i);
                 seekBar.setMax(50);
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
             }
         });
 
@@ -150,5 +145,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         signatureView.destroyDrawingCache();
+    }
+
+/*    private void saveImage2() {
+        Toast savedToast = Toast.makeText(getApplicationContext(),
+                "Saved!", Toast.LENGTH_LONG);
+        savedToast.show();
+    }*/
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

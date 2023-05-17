@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Saroyan_NPK_Paint">Рисовалка_Сароян_НПК</string>
-    <string name="app_name">Рисовалка_Сароян_НПК</string>
+    <string name="Painter">Рисовалка</string>
+    <string name="app_name">Рисовалка</string>
 </resources>

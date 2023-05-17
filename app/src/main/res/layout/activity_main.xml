@@ -8,13 +8,14 @@
     android:background="@color/yellow"
     tools:context=".MainActivity">
 
+
     <com.kyanogen.signatureview.SignatureView
         android:id="@+id/signature_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/optionsHolder"
         android:layout_marginBottom="5dp"
-        app:backgroundColor="#ffffff"
+        app:backgroundColor="#FFFFFF"
         app:enableSignature="true"
         app:penColor="#000000"
         app:penSize="5dp" />
