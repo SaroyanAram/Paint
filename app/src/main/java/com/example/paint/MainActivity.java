@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     int defaultColor;
     SignatureView signatureView;
     ImageButton btnColorPicker, btnDelete, btnSave, btnEraser;
+    Button btnEdit;
     SeekBar seekBar;
     TextView txtPenSize;
     private static String fileName;
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         askPermission();
 
+        btnEdit = findViewById(R.id.btnEdit);
         signatureView = findViewById(R.id.signature_view);
         btnColorPicker = findViewById(R.id.btnColorPicker);
         btnDelete = findViewById(R.id.btnDelete);
@@ -61,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         String date = format.format(new Date());
         fileName = path + "/" + date + ".png";
-ы
         if (!path.exists()) {
             path.mkdirs();
         }
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         btnDelete.setOnClickListener(view -> signatureView.clearCanvas());
         btnEraser.setOnClickListener(view -> touchEraser());
         btnSave.setOnClickListener(view -> saveImage());
+        btnEdit.setOnClickListener(view -> editMode());
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -88,6 +91,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void editMode() {
+        Intent i = new Intent(MainActivity.this, PickImageActivity.class);
+        startActivity(i);
     }
 
     private void askPermission() {

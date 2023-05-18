@@ -62,7 +62,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
+            android:layout_margin="1dp"
             android:layout_weight="1"
             android:gravity="end">
 
@@ -70,7 +70,7 @@
                 android:id="@+id/btnEraser"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:scaleType="center"
@@ -83,7 +83,7 @@
                 android:id="@+id/btnColorPicker"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:scaleType="center"
@@ -95,7 +95,7 @@
                 android:id="@+id/btnDelete"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:scaleType="center"
@@ -105,15 +105,25 @@
                 android:id="@+id/btnSave"
                 android:layout_width="0dp"
                 android:layout_height="60dp"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@color/white"
                 android:scaleType="center"
                 android:src="@drawable/ic_save">
 
             </ImageButton>
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:text="edit"
+                android:textColor="@color/white">
 
-
+            </Button>
         </LinearLayout>
     </LinearLayout>
 

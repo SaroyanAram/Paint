@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Painter</string>
     <string name="Painter">Painter</string>
+    <string name="ananas_image_editor_choose_image">choose image</string>
+    <string name="ananas_image_editor_edit_image">edit image</string>
+    <string name="ananas_image_editor_save_path">save path:%s</string>
 </resources>

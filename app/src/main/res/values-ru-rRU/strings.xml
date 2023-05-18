@@ -2,4 +2,7 @@
 <resources>
     <string name="Painter">Рисовалка</string>
     <string name="app_name">Рисовалка</string>
+    <string name="ananas_image_editor_choose_image">Выберите изображение</string>
+    <string name="ananas_image_editor_edit_image">Изменить изображение</string>
+    <string name="ananas_image_editor_save_path">Сохраненный путь:%s</string>
 </resources>

@@ -305,7 +305,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/C:/Android/SDK/icons/material/materialicons/redo/baseline_redo_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/mode_edit/baseline_mode_edit_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -315,7 +315,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_redo40" />
+                            <entry key="outputName" value="baseline_mode_edit" />
                             <entry key="sourceFile" value="D:\Paint_App" />
                           </map>
                         </option>
