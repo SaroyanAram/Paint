@@ -57,7 +57,7 @@ public class PickImageActivity extends AppCompatActivity implements View.OnClick
     private Dialog loadingDialog;
 
     private int imageWidth, imageHeight;
-    File outPath = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/ePaints");
+    File outPath = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Pictures");
     String fileName;
 
     private String path;
@@ -134,7 +134,7 @@ public class PickImageActivity extends AppCompatActivity implements View.OnClick
         //File outputFile = FileUtilsKt.generateEditFile();
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         String date = format.format(new Date());
-        fileName = outPath + "/" + date + ".png";
+        fileName = outPath + "/" + date + ".jpg";
         if (!outPath.exists()) {
             outPath.mkdirs();
         }
