@@ -8,6 +8,8 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.net.Uri;
+import android.nfc.Tag;
+import android.nfc.TagLostException;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -217,8 +219,8 @@ public class PickImageActivity extends AppCompatActivity implements View.OnClick
 
     private void handleSelectFromAlbum(Intent data) {
         Uri uri = data.getData();
-        path = uri.getPath();
-        loadImage(uri.getPath());
+        path = FileHelper.getRealPathFromURI(this,uri);
+        loadImage(path);
     }
 
     private void loadImage(String imagePath) {
@@ -262,9 +264,7 @@ public class PickImageActivity extends AppCompatActivity implements View.OnClick
         Uri uri = data.getData();
         imgView.setImageURI(uri);
         path = FileHelper.getRealPathFromURI(this,uri);
-        //split the path.
-        //path = split[1];//assign it to a string(your choice).
-        editImageClick();
+
     }
 
 
